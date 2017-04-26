@@ -1,0 +1,111 @@
+
+<script type="text/javascript">
+
+// variables.	
+console.log("variables");
+var ten = 10;
+console.log('ten * ten = ',ten*ten);
+
+var mood = "Light";
+console.log('mood = ',mood);
+
+var luigisDebt = 140;
+luigisDebt = luigisDebt - 35;
+console.log("luigisDebt - 35 = ",luigisDebt);
+
+var one = 1, two = 2;
+console.log("one + two = ",one + two);
+
+
+// console.log function
+console.log("console.log function");
+
+var x = 30;
+console.log("The value of x is ",x);
+
+
+// Return Values:
+console.log("Return Values");
+
+console.log("Maximum value is :",Math.max(2,4));
+
+console.log("Minimum value is :",Math.min(2,4)+100);
+
+// Prompt Example
+console.log("Prompt Example");
+
+var theNumber = Number(prompt("Pick a Number",""));
+
+if(!isNaN(theNumber))
+	alert("The Square root of a number is:" + theNumber*theNumber);
+else
+	alert("Hey why did't you select a Number");
+
+
+// While Loop Program
+console.log("While Loop Program starts:");
+
+var result = 1;
+var counter = 0;
+
+while (counter < 10) {
+	result = result * 2;
+	counter+=1;
+}
+console.log("While Loop Program:",result);
+
+// . 1024
+
+console.log("Do while loop program starts:");
+
+do {
+var name = prompt("Who are you?");
+} while (!name);
+console.log(name);
+
+// for loop demo
+
+console.log("for loop Program starts");
+var result = 1 ;
+var counter = 0;
+
+for(counter = 0;counter<10;counter++){
+	result+=2;
+}
+
+console.log("For Loop Result:",result);
+
+
+// Break Statement.
+console.log("Break statement starts:");
+
+for (var current = 20; ; current++) {
+	if (current % 7 == 0)
+	break;
+}
+console.log(current);
+
+
+// switch statement.
+console.log("switch statement starts");
+
+switch(prompt("what is the whether like?")) {
+
+	case "rainy":
+		console.log("Remember to bring an Umbrella");
+		break;
+
+	case "sunny":
+		console.log("Dress Lightly");
+		break;
+		
+	case "cloudy":
+		console.log("Go outside");	
+		break;
+		
+	default:
+		console.log("Unknown Whether Type!");
+		break;	
+}
+
+</script>
