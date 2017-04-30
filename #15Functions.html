@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Functions Exammple </title>
+</head>
+
+<body>
+<p> CLosure Demonstration</p>
+<p> Increment the counter by 4 </p>
+<button type="button" onclick="myFunction()">Count!</button>
+<p id="demo">0</p>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	
+	var makeNoise = function(){
+		console.log("Pling");
+	}
+	
+	makeNoise();
+
+	// function to get the base of 2
+
+	var power = function (base,exponent) {
+
+		var result = 1;
+
+		for(var count = 0; count<exponent; count++)
+			result*= base;
+			return result;		
+	};
+	console.log(power(2,10));
+
+
+	// Parameters and scopes.
+	console.log("Parameters and scopes");
+
+	var x = "outside";
+	var f1 = function(){
+		var x = "Inside f1";
+	}
+
+	f1();
+	console.log(x);
+
+	var f2 = function(){
+		x = "Inside of f2";
+	}
+
+	f2();
+	console.log(x);
+
+
+	// Nested Scopes.
+	console.log("Nested Function");
+	var landscape = function() {
+		
+		var result = "";
+
+		var flat = function(size) {
+			for (var count = 0; count < size; count++)
+			result += "_";
+		};
+
+		var mountain = function(size) {
+			result += "/";
+		for (var count = 0; count < size; count++)
+			result += "'";
+			result += "\\";
+	  };
+	
+		flat(3);
+		mountain(4);
+		flat(6);
+		mountain(1);
+		flat(3);
+		mountain(4);		
+		return result;
+	};
+
+	console.log(landscape());
+
+
+	console.log("The future says:",future());	
+
+	function future() {
+		return "We Still have no Flying Cars:";
+	}
+
+	function greet(who) {
+		console.log("Hello " + who);
+	}
+	
+	greet("Harry");
+	console.log("Bye");
+
+	
+	var add = (function () {
+		var counter = 0;		
+		return function(){ return counter+=4;}
+	})();
+
+
+	function myFunction(){		
+		document.getElementById("demo").innerHTML = add();		
+	}
+
+
+
+
+	console.log("Growing Function Demo");
+
+	function printZeroPaddedWithLabel(number,label){
+
+		var numberString =  String(number);
+		
+		while(numberString.length < 3) {
+			numberString = "0" + numberString;
+			console.log(numberString + " " + label);
+		}
+
+	}
+
+	function printFarmInventory(cows,chicken,sheeps) {
+		printZeroPaddedWithLabel(cows,"Cows");
+		printZeroPaddedWithLabel(chicken,"chicken");
+		printZeroPaddedWithLabel(sheeps,"sheeps");
+	}
+
+	printFarmInventory(7,3,2);
+
+</script>
+
